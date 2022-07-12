@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Place a Stock Order</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        padding: 2px;
+      }
+
+      caption {
+        font-size: 1.3em;
+        font-weight: 600;
+      }
+      form {
+        border: 1px solid black;
+        padding: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Place an Order For One of the Following Stocks</h1>
+    <table>
+      <caption>
+        List of Stocks to Purchase
+      </caption>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Symbol</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Microsoft</td>
+          <td>MSFT</td>
+          <td>232.04</td>
+        </tr>
+        <tr>
+          <td>Oracle</td>
+          <td>ORCL</td>
+          <td>67.08</td>
+        </tr>
+        <tr>
+          <td>Splunk</td>
+          <td>SPLK</td>
+          <td>137.55</td>
+        </tr>
+        <tr>
+          <td>Snowflake</td>
+          <td>SNOW</td>
+          <td>235.80</td>
+        </tr>
+        <tr>
+          <td>Teradata</td>
+          <td>TDC</td>
+          <td>44.98</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <form action="http://localhost:3000/" method="POST">
+      <p>
+        Choose the symbol
+        <select name="companyName" id="companyName">
+          <option value="Microsoft">Microsoft</option>
+          <option value="Oracle">Oracle</option>
+          <option value="Splunk">Splunk</option>
+          <option value="Snowflake">Snowflake</option>
+          <option value="Teradata">Teradata</option>
+        </select>
+        and specify the quantity
+        <input type="number" name="number" />
+        for the stock you want to buy
+        <br />
+        <button type="submit">Submit</button>
+      </p>
+    </form>
+  </body>
+</html>
